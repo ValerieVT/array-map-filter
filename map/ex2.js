@@ -42,7 +42,33 @@ Expected OUTPUT for this sample
 
 */
 
+// si isVegetarian=true, on affiche " is suitable for vegetarians" sinon on affiche " is not suitable for vegetarians"
+
+
+const foods = [
+  {
+    food: 'Bacon',
+    isVegetarian: false
+  },
+  {
+    food: 'Sausage',
+    isVegetarian: false
+  },
+  {
+    food: 'Tofu',
+    isVegetarian: true
+  },
+  {
+    food: 'Chick Pea',
+    isVegetarian: true
+  }
+]
+
 function getFoodCategories(foods) {
+  const manger = foods.map(function(veggie){
+    return (veggie.isVegetarian) ?  `${veggie.food} is suitable for vegetarians` : `${veggie.food} is not suitable for vegetarians`;    
+  })
+  return manger;
 }
 
 

@@ -13,8 +13,14 @@ Expected OUTPUT for this sample:
 
 */
 
-function getPositiveNumbers(numbers) {
+const myArray =[7, -4, 2, 0, -10, 3, 11];
+
+
+function getPositiveNumbers(myArray) {
+  const onlyPositive = myArray.filter(telephone => telephone >= 0);
+  return onlyPositive;
 }
+
 
 // If you need, you can always visualize the result with a console.log.
 // In that case, uncomment the line below (you can also add your own

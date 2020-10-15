@@ -25,9 +25,44 @@ Expected OUTPUT for this sample array:
   ]
 
 */
+const food = [
+  'Chicken',
+  'Bacon',
+  'Tofu',
+  'Mayonnaise'
+]
 
-function getStringsLength(strings) {
+function getStringsLength(food) {
+  const sandwich = food.map(function(name){
+    return `${name} contains ${name.length} characters`;
+  });
+  return sandwich;
 }
+
+
+
+
+
+
+/*
+const wordLength = [
+  7,
+  5,
+  12,
+  10
+]
+*/ 
+
+// Chicken => index 0 du tableau food
+// C => index 0 du "tableau" Chicken
+
+
+// const wordLength = food.map(function(word){
+//   return word.length;
+// });
+// console.log(wordLength);
+
+
 
 // If you need, you can always visualize the result with a console.log.
 // In that case, uncomment the line below (you can also add your own

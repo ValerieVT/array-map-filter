@@ -61,9 +61,56 @@ Expected OUTPUT for this sample:
 
  */
 
+const movies = [
+  {
+    name: 'Crazy Rich Asians',
+    rating: 93
+  },
+  {
+    name: 'Skyscraper',
+    rating: 46
+  },
+  {
+    name: 'Leave No Trace',
+    rating: 100
+  },
+  {
+    name: 'White Boy Rick',
+    rating: 60
+  }
+]
+
 function getMoviesFreshness(movies) {
+  
+  movies.map(function(compareRating){
+    
+    if((compareRating.rating) < 60 ) {
+      compareRating.label = "rotten";
+      //return compareRating.push('label : "rotten"');
+    } else if ((compareRating.rating) >= 60  && (compareRating.rating) <= 75) {
+      compareRating.label = "fresh";
+      //return compareRating.push('label : "fresh"');
+    } else {
+      compareRating.label = "certified fresh";
+     // return compareRating.push('label : "certified fresh"');
+    }
+  })
+  //console.log(movies);
+  return movies;
 }
 
+//getMoviesFreshness(movies);
+// => La fonction getMoviesFreshness retourne un nouveau de tableau qui comprend le tableau movies + le paramètre label avec la valeur correspondante au rating
+// movies2 [
+//   {name : valeur initiale
+//   rating : valeur initiale
+// label : résultat de la comparaison }
+// ]
+
+// if , else if
+// rating < 60, label : "rotten"
+// rating > 60 && rating <=75, label :"fresh"
+// rating > 75, label : "certified fresh"
 
 
 // DON'T TOUCH THIS!

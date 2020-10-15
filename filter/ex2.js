@@ -24,8 +24,16 @@ Expected OUTPUT for this sample:
   ['Bran Stark', 'Arya Stark', 'Sansa Stark']
 
 */
+const names = ['Bran Stark',
+'Cersei Lannister',
+'Sandor Clegane',
+'Arya Stark',
+'Yara Greyjoy',
+'Sansa Stark']
 
 function keepStarks(names) {
+  const onlyStarks = names.filter(newArray => newArray.includes("Stark"));
+  return onlyStarks;
 }
 
 // DON'T TOUCH THIS!
